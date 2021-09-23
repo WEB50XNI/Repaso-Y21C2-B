@@ -17,7 +17,7 @@ function renderHTML(ruta){
             let res=request.responseText;
             let content= document.getElementById("contenidoDinamico");
             content.innerHTML=res;
-            history.pushState(document.textContent, ruta, ruta)
+            history.pushState(document.textContent, ruta, ruta);
             return false;
         }
         else{
@@ -34,14 +34,14 @@ function agregar(form){
     request.open("POST", "/agregar");
     request.onload = function(){
         if(request.status == 200){
-            document.querySelectorAll("input").forEach(input)= function(){
-                input.text="";
-            };
+            document.querySelectorAll("input").forEach(input => {
+                input.value="";
+            });
             alert("Agregado con exito")
             let res=request.responseText;
             let content= document.getElementById("contenidoDinamico");
             content.innerHTML=res;
-            history.pushState(document.textContent, ruta, ruta)
+            history.pushState(document.textContent, ruta, ruta);
             return false;
         }
         else{
