@@ -1,0 +1,14 @@
+<h2>Mostrar todo <br>
+    <hr>
+</h2>
+{% for r in res %}
+<div class="row" style="margin-top: 50px;">
+    <div class="card" style="width: 18rem;">
+        <img src="{{r.image}}" class="card-img-top" alt="{{r.name}}">
+        <div class="card-body">
+            <h5 class="card-title">{{r.name}} <b>{{r.year}}</b></h5>
+            <p class="card-text">{{r.description}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}

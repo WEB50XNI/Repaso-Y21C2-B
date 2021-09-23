@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block head_css %}{% endblock %}
+
+{% block title %}Bienvenido{% endblock %}
+
+{% block main_html %}
+    {% for ruta in rutas %}
+        <button onclick="renderHTML('/{{ruta}}')">{{ruta.upper()}}</button>
+    {% endfor %}
+{% endblock %}
